@@ -1,0 +1,9 @@
+<div class="list-group">
+    <strong  class="list-group-item active"
+        style="background-color: blue; color: white;"></i> MỤC SẢN PHẨM</strong>
+    <div>
+        <a th:each="c:${cates}" class="dropdown-item list-group-item" th:href="@{|/product/list?cid=${c.id}|}">
+            <i class="fa fa-product-hunt" aria-hidden="true"></i> [[${c.name}]]</a>
+    </div>
+</div>
+

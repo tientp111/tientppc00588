@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{/layout/index :: dynamic(~{::main})}">
+
+<body>
+	<main th:object="${item}">
+	<div class="row mt-3">
+
+		<aside class="col-sm-5" style="height: 400px;">
+			<img style="width: 400px" height="80%"
+				th:src="@{|/assets/image/*{image}|}" alt="">
+		</aside>
+
+		<article class="col-sm-7">
+			<h1 th:text="*{name}"></h1>
+			<hr>
+			<strong>Loại sản phẩm:</strong> <a th:text="*{category.name}"></a>
+			<br> <strong>Ngày:</strong> <b href="" th:text="*{createDate}"></b>
+			<hr>
+			<strong>Giá: </strong><a style="color: orange;" href=""
+				th:text="*{price}"></a> đ 
+				<a class="btn btn-danger" type="submit" th:attr="ng-click=@{|cart.add(*{id})|}"><i
+				style="font-size: 30px" class="fa fa-shopping-cart mr-2"
+				aria-hidden="true"></i></a>
+		</article>
+
+	</div>
+<h4>Sản phẩm liên quan</h4>
+	<hr>
+	<ul class="row" style="list-style: none">
+		<li th:each="p:${item.category.products}" class="col-sm-3">
+			<div class="card mt-2">
+				<div class="card-header">
+					<h6 class="card-title" th:utext="${p.name}"></h6>
+				</div>
+				<div class="card-body" style="height: 150px">
+					<a th:href="@{|/product/detail/${p.id}|}"> <img
+						th:src="@{|/assets/image/${p.image}|}" width="90%" height="99%"
+						class="card-img-top" alt="...">
+					</a>
+				</div>
+		</li>
+
+	</ul>
+	<hr>
+
+	</main>
+</body>
+
+</html>

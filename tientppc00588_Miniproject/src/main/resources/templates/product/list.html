@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{/layout/index :: dynamic(~{::main})}">
+
+<body style="background-color: white;">
+
+	<main>
+		<div th:replace="/layout/banner.html"></div>
+		<div class="container d-flex justify-content-center mt-50 mb-50">
+			<div class="row">
+				<div th:each="p:${list}" class="col-md-4 mt-2">
+					<div class="card">
+						<div class="card-body">
+
+							<div class="card-img-actions">
+								<a th:href="@{|/product/detail/${p.id}|}"> <img
+									th:src="@{|/assets/image/${p.image}|}"
+									class="card-img img-fluid" width="96" height="350" alt="">
+								</a>
+							</div>
+
+						</div>
+						<div class="card-body bg-light text-center">
+							<div class="mb-2">
+								<h6 class="font-weight-semibold mb-2">
+									<a th:href="@{|/product/detail/${p.id}|}" th:utext="${p.name}" class="text-default mb-2" data-abc="true"></a>
+								</h6>
+							</div>
+							<h3 class="mb-0 font-weight-semibold">[[${p.price}]]đ</h3>
+							<div style="color: red">
+								<i class="fa fa-star star"></i> <i class="fa fa-star star"></i>
+								<i class="fa fa-star star"></i> <i class="fa fa-star star"></i>
+							</div>
+							<div class="text-muted mb-3">34 reviews</div>
+							<a href="#" class="btn btn-warning"
+							th:attr="ng-click=@{|cart.add(${p.id})|}"><i
+							class="fa fa-cart-plus"></i> Thêm giỏ hàng</a> 
+							
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="mt-4 ml-3 ">
+			<a class="btn btn-info" th:href="@{|/product/list?page=0|}"> <i
+				class="fa fa-step-backward" aria-hidden="true"></i>
+			</a> <a class="btn btn-info"
+				th:href="@{|/product/list?page=${list.number-1}|}"> <i
+				class="fa fa-caret-left" aria-hidden="true"></i>
+			</a> <a class="btn btn-info"
+				th:href="@{|/product/list?page=${list.number+1 > list.getTotalPages() -1 ? list.getTotalPages() -1:list.number+1 }|}">
+				<i class="fa fa-caret-right" aria-hidden="true"></i>
+			</a> <a class="btn btn-info"
+				th:href="@{|/product/list?page=${list.getTotalPages()-1}|}"> <i
+				class="fa fa-step-forward" aria-hidden="true"></i>
+			</a>
+		</div>
+	</main>
+</body>
+
+</html>

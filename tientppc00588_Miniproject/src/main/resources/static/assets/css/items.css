@@ -1,0 +1,46 @@
+@charset "ISO-8859-1";
+
+.row .col {
+	margin: 0 !important;
+}
+
+.name a {
+	text-decoration: none;
+	font-size: 18px;
+	color: #3d551c;
+}
+
+.name a:hover {
+	text-decoration: none;
+	color: #85BA3D;
+}
+
+.muangay {
+	width: 250px;
+	height: 40px;
+	font-size: 12px;
+	padding-top: 7px;
+	color: #FFFFFF;
+	background-color: #74C641;
+	border: 1px solid rgba(128, 128, 128, 0.253);
+	height: 35px;
+	color: #FFFFFF;
+}
+
+.muangay:hover {
+	text-decoration: none;
+	color: #FFFFFF;
+	background-color: #2A2A29;
+}
+.cart_hover:hover {
+	border: 1px solid #85BA3D;
+}
+
+.deu-huong button {
+	margin: 0 !important;
+	border: none;
+	width: 50px;
+	color: white;
+	background-color: #85BA3D;
+	font-size: 20px;
+}

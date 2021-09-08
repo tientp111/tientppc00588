@@ -1,0 +1,177 @@
+@charset "ISO-8859-1";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* MENU TRẠNG THÁI */
+.clearfix:after {
+    display: block;
+    clear: both;
+}
+
+.menu li {
+    list-style: none;
+    font-family: 'Ek Mukta';
+}
+
+.menu a {
+    transition: all linear 0.15s;
+    color: gray;
+    text-decoration: none;
+}
+
+.menu li:hover>a {
+    text-decoration: none;
+    color: #74C641;
+}
+
+.menu>ul>li {
+    display: inline-block;
+    position: relative;
+    margin-left: 2%;
+    font-size: 14px;
+}
+
+
+/* ----- MENU CHỨC NĂNG ----- */
+
+.menu2 li{
+    margin: 0px;
+    list-style: none;
+    font-family: 'time new roman';
+}
+.menu2 ul li a{
+    text-decoration: none;
+    color: white;
+    transition: all linear 0.25s;
+}
+.menu2>ul>li{
+    display: inline-block;
+    height: 54px;
+    width: 110px;
+    font-size: 13px;
+    text-align: center;    
+    padding-top: 17px;
+    border-right: 0.2px solid rgba(255, 255, 255, 0.15);
+}
+.menu2 li:hover>a {
+    text-decoration: none;
+    color: #74c641;    
+}
+/* dropdown-menu */
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2A2A29;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    /* margin-top: 15px; */
+    border-top: 1px dotted rgba(255, 255, 255, 0.479);
+    text-decoration: none;
+    display: block;
+  }
+  
+.dropdown-content a:hover {
+    background-color: #74c641
+}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+/* ==================== */
+.find{
+    width: 40%; 
+    height: 115px; 
+    float: left;
+}
+.classfind{
+    width: 100%;
+    height: 35%;
+    margin-top: 30px;
+}
+.classfind .input{
+    width: 70%;
+    float: left;
+}
+.classfind .buttonsearch{
+    width: 20%;
+    height: 95%;
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+    background-color: #74c641;
+    border-radius: 5px;
+    float: left;
+}
+.classfind .buttonsearch p{
+    text-align: center;
+    font-size: 10px;
+}
+.buttonsearch:hover>p {
+    text-decoration: none;
+    color: rgb(192, 50, 50);    
+}
+
+/* FOOTER */
+.item h3{
+    color: white;
+    font-size: 21px;
+}
+
+.box-address-content{
+    color: white;
+    font-size: 15px;
+}
+.box-address-content p a {
+	font-size: 15px;
+	color: #74C641;
+}
+
+.footer-box{
+    color: white;
+}
+.footer-box ul li a{
+    color: gray;
+    padding: 10px;
+    font-size: 14px;
+    text-decoration: none;
+}
+.footer-box ul li a:hover{
+    color: #74C641;
+    margin-left: 8px;
+    font-size: 16px;
+    text-decoration: none;
+}
+.social-icon ul li{
+    list-style: none;
+    color: #74C641;
+    font-size: 20px;
+}
+.social-icon ul li a{
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-left: 10px;
+    text-align: center;
+    padding-top:2%;
+    border: 1px solid white;
+    border-radius: 25px;
+    list-style: none;
+}
+
+.btn{
+	font-size: 18px;
+}
+
+.btn-success{
+    border-color: #74C641;
+	background-color: #74C641;
+}

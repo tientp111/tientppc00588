@@ -1,0 +1,38 @@
+@charset "ISO-8859-1";
+.row .col {
+        margin: 0 !important;
+    }
+
+    .dathang {
+        font-size: 12.5px;
+    }
+
+/*     .card-header {
+    	background-color: #8DC541;
+        color: white;
+        font-size: 12.5px;
+    } */
+
+    .form-check-label {
+        font-size: 12px;
+    }
+
+    .form-control {
+        font-size: 12px;
+    }
+
+    .ttmuahang {
+        width: 80%;
+        height: 35px;
+        font-size: 15px;
+        border: 1px solid rgba(128, 128, 128, 0.253);
+        background-color: #FFFFFF;
+    }
+
+    .ttmuahang:hover {
+        color: #FFFFFF;
+        background-color: #74C641;
+    }
+    .mota{
+        font-size: 14px;
+    }

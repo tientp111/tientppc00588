@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	th:replace="~{/layout/index :: dynamic(~{::main})}">
+<main>
+	<div class="card-header" style="background: #98D0B9">
+		<h4>ĐĂNG NHẬP</h4>
+	</div>
+	<div class="row">
+		<div class="col-sm-2"></div>
+		<div class="col-sm-9">
+			<form th:action="@{/security/login}" method="post">
+				<div class="col-sm-12 mt-3 card p-1 mb-1 bg-white rounded">
+
+					<div class="alert-success">
+						<strong th:text="${message}"></strong>
+					</div>
+					<div class="alert-danger">
+						<strong th:text="${messageer}"></strong>
+					</div>
+					<div class="card-body">
+						<div class="row mt-2">
+							<label for="Code" class="col-sm-4 text-right">Tên đăng
+								nhập: <span class="error"></span>
+							</label>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<input type="text" name="username" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="row mt-3">
+							<label for="Code" class="col-sm-4 text-right">Mật khẩu:<span
+								class="error"></span></label>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<input type="password" name="password" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="row mt-3">
+							<div class="col-sm-4"></div>
+							<div class="form-check col-sm-6">
+								<input type="checkbox" name="remember-me"
+									class="form-check-input"> <label
+									class="form-check-label">Nhớ mật khẩu?</label>
+								<button class="btn btn-success" style="float: right;">Đăng
+									nhập</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</main>
